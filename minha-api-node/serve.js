@@ -30,6 +30,7 @@ function itauna(request, response) {
         return;
     }
     
+    if (request.method === "GET" && URL.pathname === "/alunos") {}
     response.writeHead(404, { "Content-type": "text/plain" })
     response.end(JSON.stringify({ error: "Error ao ler o arquivo" }));
 }
@@ -38,4 +39,3 @@ serve.listen(3000, () => console.log("servidor rodando!"))
 
 
 
-if (request.method === "GET" && URL.pathname === "/alunos") {}
